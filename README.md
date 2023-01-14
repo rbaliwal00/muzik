@@ -9,7 +9,7 @@ git clone https://github.com/rbaliwal00/muzik.git
 Change Directories
 
 ```bash
-cd full-stack-app-next-starter
+cd muzik
 ```
 
 Install Dependencies
