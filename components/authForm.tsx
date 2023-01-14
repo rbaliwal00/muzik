@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Button } from '@chakra-ui/react'
+import { Box, Flex, Input, Button,Text, Center } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { FC, useState } from 'react'
 import { useSWRConfig } from 'swr'
@@ -56,6 +56,12 @@ const AuthForm: FC<{ mode: 'signin' | 'signup' }> = ({ mode }) => {
               {mode}
             </Button>
           </form>
+          <Center>
+            <Text>Email - user@test.com</Text>
+          </Center>
+          <Center>
+            <Text>Password - password</Text>
+          </Center>
         </Box>
       </Flex>
     </Box>

@@ -82,7 +82,7 @@ import {
     const nextSong = () => {
       setIndex((state) => {
         if (shuffle) {
-          const next = Math.floor(Math.random() * songs.length)
+          const next = Math.floor(Math.random() * songs?.length)
   
           if (next === state) {
             return nextSong()
@@ -90,14 +90,14 @@ import {
           return next
         }
   
-        return state === songs.length - 1 ? 0 : state + 1
+        return state === songs?.length - 1 ? 0 : state + 1
       })
     }
   
     const onEnd = () => {
       if (repeatRef.current) {
         setSeek(0)
-        soundRef.current.seek(0)
+        soundRef.current?.seek(0)
       } else {
         nextSong()
       }
@@ -110,7 +110,7 @@ import {
   
     const onSeek = (e) => {
       setSeek(parseFloat(e[0]))
-      soundRef.current.seek(e[0])
+      soundRef.current?.seek(e[0])
     }
   
     return (
