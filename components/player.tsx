@@ -42,7 +42,7 @@ import {
   
       if (playing && !isSeeking) {
         const f = () => {
-          setSeek(soundRef.current.seek())
+          setSeek(soundRef.current?.seek())
           timerId = requestAnimationFrame(f)
         }
   
